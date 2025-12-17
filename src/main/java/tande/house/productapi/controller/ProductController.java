@@ -11,7 +11,7 @@ import tande.house.productapi.repo.ProductRepository;
 import java.util.List;
 
 @RestController
-@RequestMapping("/products")
+@RequestMapping("/product")
 @RequiredArgsConstructor
 public class ProductController {
 
