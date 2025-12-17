@@ -1,14 +1,15 @@
 package tande.house.productapi.dto;
 
 import jakarta.validation.constraints.Min;
-import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.NotBlank;
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter @Setter
 public class StockItemRequest {
-    @NotNull
-    private Long productId;
+
+    @NotBlank
+    private String productId;
 
     @Min(1)
     private int quantity;

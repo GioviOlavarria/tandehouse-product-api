@@ -6,11 +6,12 @@ import lombok.Getter;
 @Getter
 @AllArgsConstructor
 public class ProductResponse {
-    private Long id;
+    private String id;
     private String nombre;
-    private String descripcion;
-    private int precio;
-    private int stock;
-    private boolean activo;
-    private String imagenUrl;
+    private Integer precio;
+    private Integer stock;
+    private String categoria;
+    private Boolean oferta;
+    private String portada;
+    private String sku;
 }

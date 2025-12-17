@@ -1,8 +1,13 @@
 package tande.house.productapi.model;
 
-
-import jakarta.persistence.*;
-import lombok.*;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Getter @Setter
 @NoArgsConstructor @AllArgsConstructor
@@ -11,24 +16,27 @@ import lombok.*;
 public class Product {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    @Column(nullable = false)
+    private String id;
 
     @Column(nullable = false)
     private String nombre;
 
-    @Column(nullable = false, length = 1000)
-    private String descripcion;
+    @Column(nullable = false)
+    private Integer precio;
 
     @Column(nullable = false)
-    private int precio;
+    private Integer stock;
 
     @Column(nullable = false)
-    private int stock;
+    private String categoria;
 
     @Column(nullable = false)
-    private boolean activo;
+    private Boolean oferta;
 
     @Column(nullable = false)
-    private String imagenUrl;
+    private String portada;
+
+    @Column(nullable = false)
+    private String sku;
 }
